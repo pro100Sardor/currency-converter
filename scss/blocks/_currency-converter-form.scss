@@ -68,3 +68,12 @@
   user-select: none;
   margin-bottom: 50px;
 }
+
+.currency-converter-form__caution {
+  color: #bbb;
+}
+
+.currency-converter-form__caution::selection {
+  background-color: $main-color-less-undertint;
+  color: #fff;
+}
