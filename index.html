@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Currency converter</title>
+
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/main.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="sr-only">This website calculates the value of Euro, Dollar, Ruble, Lira, Dinor, Yuan in soums</h1>
+    <form class="currency-converter-form" id="currencyConverterForm" action="https://echo.htmlacademy.ru" method="GET">
+      <input class="currency-value" id="currencyValue" type="number" name="currency_value">
+      <select class="currency" name="currency" id="currencyUnit">
+        <option value="euro">EURO &#8364;</option>
+        <option value="yuan">YUAN &#20803;</option>
+        <option value="rubl">RUBL &#8381;</option>
+        <option value="lira">LIRA &#8378;</option>
+        <option value="funt">FUNT &#65505;</option>
+        <option value="dollar">DOLLAR &#36;</option>
+      </select>
+      <button type="submit">to convert to soums</button>
+    </form>
+    <span class="currency-in-sum" id="currencyInSum"></span>
+  </div>
+
+  <!-- scripts -->
+  <script src="./js/jquery-3.5.1.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/scripts.min.js"></script>
+</body>
+</html>
