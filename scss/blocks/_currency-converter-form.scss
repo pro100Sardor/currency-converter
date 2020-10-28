@@ -1,0 +1,70 @@
+.currency-converter-form__title {
+  &::before {
+    content: "";
+    width: 66px;
+    height: 70px;
+    margin-right: 15px;
+    background-image: url("../img/cours.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+
+  @include breakpoint-down (500px) {
+    font-size: 28px;
+
+    &::before {
+      width: 56px;
+      height: 60px;
+    }
+  }
+
+  @include breakpoint-down (400px) {
+    font-size: 22px;
+
+    &::before {
+      width: 46px;
+      height: 50px;
+    }
+  }
+}
+
+.currency-converter-form__title::selection, .currency-converter-form__currency-value::selection {
+  background-color: $main-color-undertint;
+}
+
+.currency-converter-form__currency-value.currency-converter-form__currency-value {
+  color: $main-color;
+}
+
+.currency-converter-form__currency-value::placeholder {
+  color: $main-color-less-undertint;
+}
+
+.currency-converter-form__currency {
+  color: $main-color;
+}
+
+.currency-converter-form__button {
+  background-color: $button-color;
+  color: $secondary-color;
+
+  &:hover {
+    color: $secondary-color;
+  }
+
+  &:active {
+    color: $button-color;
+  }
+
+  &:focus {
+    color: $main-color;
+  }
+}
+
+.currency-converter-form__currency-in-sum {
+  color: $main-color;
+  cursor: not-allowed;
+  user-select: none;
+  margin-bottom: 50px;
+}

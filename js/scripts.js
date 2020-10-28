@@ -33,5 +33,10 @@ currencyConverterForm.addEventListener('submit', function (evt) {
   }
 
   var convertResult = document.querySelector('#currencyInSum');
-  convertResult.textContent = currencyInSum;
+  convertResult.textContent = currencyInSum + ' sum';
+});
+
+currencyConverterForm.addEventListener('reset', function (evt) {
+  var convertResult = document.querySelector('#currencyInSum');
+  convertResult.textContent = "";
 });
