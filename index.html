@@ -10,22 +10,28 @@
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/main.min.css">
 </head>
-<body>
-  <div class="container">
+<body class="bg-white">
+  <div class="mx-auto my-auto rounded-lg px-4 py-5 site-container">
     <h1 class="sr-only">This website calculates the value of Euro, Dollar, Ruble, Lira, Dinor, Yuan in soums</h1>
     <form class="currency-converter-form" id="currencyConverterForm" action="https://echo.htmlacademy.ru" method="GET">
-      <input class="currency-value" id="currencyValue" type="number" name="currency_value">
-      <select class="currency" name="currency" id="currencyUnit">
+
+      <h2 class="h3 mb-4 text-center">Currency converter</h2>
+
+      <label class="sr-only" for="currencyValue">Enter the value of your currency</label>
+      <input class="form-control currency-value" id="currencyValue" type="number" name="currency_value" aria-label="only numbers from 0 to 9 can be entered in this field" pattern="[0-9]" minlength="1" autocomplete="off" placeholder="how much is your currency?" required>
+
+      <select class="currency" name="currency" id="currencyUnit" required>
         <option value="euro">EURO &#8364;</option>
         <option value="yuan">YUAN &#20803;</option>
         <option value="rubl">RUBL &#8381;</option>
         <option value="lira">LIRA &#8378;</option>
         <option value="funt">FUNT &#65505;</option>
-        <option value="dollar">DOLLAR &#36;</option>
+        <option value="dollar" selected>DOLLAR &#36;</option>
       </select>
-      <button type="submit">to convert to soums</button>
+
+      <button class="btn btn-success text-uppercase" type="submit">convert</button>
+      <p class="currency-in-sum" id="currencyInSum"></p>
     </form>
-    <span class="currency-in-sum" id="currencyInSum"></span>
   </div>
 
   <!-- scripts -->
