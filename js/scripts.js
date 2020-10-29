@@ -1,3 +1,7 @@
+var siteBody = document.querySelector('#siteBody');
+
+siteBody.classList.remove('page__body--nojs');
+
 var euroInUzs = 12285.78;
 var yuanInUzs = 11457.51;
 var rublInUzs = 136.11;
@@ -40,8 +44,4 @@ currencyConverterForm.addEventListener('reset', function (evt) {
   var convertResult = document.querySelector('#currencyInSum');
   convertResult.textContent = "";
 });
-
-var siteBody = document.querySelector('#siteBody');
-
-siteBody.classList.remove('page__body--nojs');
 
